@@ -2,9 +2,30 @@
 
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
-    s.average = 0;
-    s.min = 0;
-    s.max = 0;
+    int i,j,k;
+    float total=0;
+    float maximum =numberset[0];
+    float minimum =numberset[0];
+    
+    //average calculation
+    for(i=0;i<setlength;i++){
+        total=+ numberset[i];
+    }
+    s.average = total/setlength;
+    
+    //max calculation
+    for(j=1;j<setlength;j++){
+        if(numberset[j]> maximum)
+            maximum =numberset[j];
+    }     
+    s.max = maximum;
+    
+    //
+    for(k=1;k<setlength;k++){
+        if(numberset[k]< minimum)
+            minimum =numberset[k];
+    }
+    s.min = minimum;
    
     return s;
 }

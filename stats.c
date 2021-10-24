@@ -10,6 +10,10 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
 }
 
 check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats){
+    
+    alerters[0] = emailAlerter;
+    alerters[1] = ledAlerter ;
+    
     if (computedStats.max > maxThreshold)
     {
         *alerters[0]();

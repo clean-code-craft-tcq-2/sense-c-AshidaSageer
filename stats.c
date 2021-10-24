@@ -48,5 +48,5 @@ void emailAlerter (void){
 }
 
 void ledAlerter (void){
-int ledAlertCallCount ++;
+ledAlertCallCount ++;
 }

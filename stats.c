@@ -9,6 +9,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     return s;
 }
 
+check_and_alert(maxThreshold, alerters, computedStats){
+}
+
 void emailAlerter (void){
 int emailAlertCallCount = 0;
 }

@@ -3,7 +3,8 @@
 struct Stats compute_statistics( float* numberset, int setlength) {
     struct Stats s;
     
-    if(setlength!=0){
+    //if(setlength!=0){
+    if(!(isnan(setlength))){
     int i,j,k;
     double total=0;
     float maximum =numberset[0];
@@ -32,8 +33,8 @@ struct Stats compute_statistics( float* numberset, int setlength) {
     }
     else{
          s.average=0;
-      s.min = 0;
-        s.max =0;
+         s.min = 0;
+         s.max =0;
     }
    
     return s;
@@ -41,8 +42,7 @@ struct Stats compute_statistics( float* numberset, int setlength) {
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats){
     
-    //alerters[0] = emailAlerter;
-    //alerters[1] = ledAlerter ;
+
     
     if (computedStats.max > maxThreshold)
     {

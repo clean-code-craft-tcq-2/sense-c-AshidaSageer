@@ -1,3 +1,6 @@
+#ifndef STATS_H
+#define STATS_H
+
 struct Stats {
   float average;
   float min;
@@ -14,3 +17,5 @@ void ledAlerter (void);
 
 extern int emailAlertCallCount;
 extern int ledAlertCallCount;
+
+#endif

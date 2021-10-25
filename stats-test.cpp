@@ -22,9 +22,9 @@ TEST_CASE("average is NaN for empty array") {
      computedStats = compute_statistics(0, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    REQUIRE(abs(computedStats.average ) = 1);
-    REQUIRE(abs(computedStats.max) = 1);
-    REQUIRE(abs(computedStats.min) = 1);
+    REQUIRE((computedStats.average ) = 1);
+    REQUIRE((computedStats.max) = 1);
+    REQUIRE((computedStats.min) = 1);
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }

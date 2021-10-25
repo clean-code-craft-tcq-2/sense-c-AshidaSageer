@@ -17,5 +17,6 @@ extern void ledAlerter (void);
 
 extern int emailAlertCallCount;
 extern int ledAlertCallCount;
+extern const float nan = 0.0/0.0;
 
 #endif

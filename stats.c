@@ -3,7 +3,7 @@
 struct Stats compute_statistics( float* numberset, int setlength) {
     struct Stats s;
     int i,j,k;
-    float total=0;
+    double total=0;
     float maximum =numberset[0];
     float minimum =numberset[0];
     

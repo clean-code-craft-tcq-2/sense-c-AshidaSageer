@@ -1,4 +1,5 @@
 #include "stats.h"
+#include <math.h>
 
 
 struct Stats compute_statistics( float* numberset, int setlength) {

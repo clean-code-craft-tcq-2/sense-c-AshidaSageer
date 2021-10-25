@@ -9,7 +9,7 @@ struct Stats compute_statistics( float* numberset, int setlength) {
     
     //average calculation
     for(i=0;i<setlength;i++){
-        total=+ numberset[i];
+        total=total+ numberset[i];
     }
     s.average = total/setlength;
     

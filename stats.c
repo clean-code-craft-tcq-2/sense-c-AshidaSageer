@@ -1,11 +1,10 @@
 #include "stats.h"
-#include <math.h>
+
 
 struct Stats compute_statistics( float* numberset, int setlength) {
     struct Stats s;
     
-    //if(setlength!=0){
-    if(!(isnan(setlength))){
+    if(setlength!=0){
     int i,j,k;
     double total=0;
     float maximum =numberset[0];
@@ -33,9 +32,9 @@ struct Stats compute_statistics( float* numberset, int setlength) {
     s.min = minimum;
     }
     else{
-         s.average=0;
-         s.min = 0;
-         s.max =0;
+         s.average=nan;
+         s.min = nan;
+         s.max =nan;
     }
    
     return s;
